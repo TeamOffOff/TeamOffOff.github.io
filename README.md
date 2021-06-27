@@ -1,2 +1,0 @@
-# TeamOffPublic.github.io
-Blog
