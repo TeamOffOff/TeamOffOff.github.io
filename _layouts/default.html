@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+
+{% include head.html %}
+
+<head>
+	<!-- 웹 폰트 설정 -->
+    <link rel="stylesheet" 
+          href="https://fonts.googleapis.com/earlyaccess/nanumgothic.css">
+
+    <!-- syntax.css -->
+    <link rel="stylesheet" href="/assets/syntax.css">
+</head>
+
+<body>
+
+  {% include navbar.html %}
+
+  {{ content }}
+
+  {% include footer.html %}
+
+  {% include scripts.html %}
+
+  {% include google-analytics.html %}
+
+</body>
+
+</html>
