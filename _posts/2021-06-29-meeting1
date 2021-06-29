@@ -1,5 +1,0 @@
-layout: post # 고정
-title: “Test Post” # 포스트 제목
-subtitle: “Test Post subtitle” # 부제목
-date: 2021-06-28 # 날짜
-background: ‘/img/posts/01.jpg’ # 배경 이미지 경로
