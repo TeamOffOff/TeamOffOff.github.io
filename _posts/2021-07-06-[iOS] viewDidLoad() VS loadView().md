@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[iOS] viewwDidLoad() VS loadView()"
+title: "[iOS] viewDidLoad() VS loadView()"
 author: "Lee Nam Jun"
 date: 2021-07-06
 background: 'https://developer.apple.com/swift/images/swift-og.png'
