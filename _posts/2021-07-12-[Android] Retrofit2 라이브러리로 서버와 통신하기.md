@@ -90,6 +90,7 @@ data class GithubRepo(
 - 앱에서 서버 호출이 필요한 곳마다 인터페이스를 사용해야 하는데, 인터페이스를 여러 번 구현하지 않고, 한 번만 구현해 놓고 필요한 곳에서 사용하려면?
    - 코틀린의 `object` 사용
    - `object`는 singleton 이기 때문에 전역 변수처럼 앱의 모든 곳에서 접근 가능
+  
 ```kotlin
 // singleton(메모리를 하나만 씀)
 object RetrofitClient {
