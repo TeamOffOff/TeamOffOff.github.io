@@ -4,9 +4,9 @@ title: "[iOS] viewDidLoad() VS loadView()"
 author: "Lee Nam Jun"
 date: 2021-07-06
 background: 'https://developer.apple.com/swift/images/swift-og.png'
-tags: iOS
+tags: 
+    - iOS
 ---
-<br>
 
 오프오프의 iOS 앱은 앱의 UI 작업을 Interface Builder가 아닌 SnapKit과 Then의 조합으로 코드를 통해 구현했습니다.  
 코드로 view를 그렸기 때문에 보통 IB를 통해 view를 구성할 때와 여러가지 차이점이 있지만 그중 한가지인 ```loadView()```메소드 사용에 대해 ```viewDidLoad()```와 비교를 통해 알아보겠습니다.
