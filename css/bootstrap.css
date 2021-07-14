@@ -1566,6 +1566,7 @@ pre code {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+
 }
 @media (min-width: 768px) {
   .container {
@@ -1580,6 +1581,11 @@ pre code {
 @media (min-width: 1200px) {
   .container {
     width: 1170px;
+  }
+}
+@media (min-width: 2700px) {
+  .container {
+    width: 2560px;
   }
 }
 .container-fluid {

@@ -129,7 +129,7 @@
 .side-catalog .catalog-body .active a {
   color: #0085a1!important;
 }
-@media (max-width: 1200px) {
+@media (max-width: 2560px) {
   .side-catalog {
     display: none;
   }
