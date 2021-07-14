@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[iOS] viewDidLoad() VS loadView()"
-author: "Lee Nam Jun"
+author: "이남준"
 date: 2021-07-06
 background: 'https://developer.apple.com/swift/images/swift-og.png'
 tags: 
