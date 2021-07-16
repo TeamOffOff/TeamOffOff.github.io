@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[Android] Retrofit2 라이브러리로 서버와 통신하기"
-author: "Park Yu Jin"
+author: "박유진"
 date: 2021-07-12
 background: 'https://media.vlpt.us/images/bonimddal2/post/d5947941-13d4-4772-ac13-927fb2cf1ba7/0_nZkN6lvnF2cGhLof.png'
 tags: Android
