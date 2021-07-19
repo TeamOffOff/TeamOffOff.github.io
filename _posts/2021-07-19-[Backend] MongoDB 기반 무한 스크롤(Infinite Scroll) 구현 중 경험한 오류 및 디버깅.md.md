@@ -76,23 +76,29 @@ tags: python
  ### 1. document sorting 시 dictionary 사용하는 경우 TypeError가 발생합니다.
  <br> 
  도큐먼트를 쿼리할 때 정렬기능(sort)을 사용할 수 있습니다.  
- ```pymongo```의 sort()는 정렬의 기준이 되는 key와 direction을 매개 변수로 사용합니다.  
+ 
+ ```pymongo``` 의 sort()는 정렬의 기준이 되는 key와 direction을 매개 변수로 사용합니다.  
+ 
  이때 direction은 1(정방향), -1(역방향)입니다.
  <br>
  만약 최근에 저장된 도큐먼트부터 쿼리하고 싶다면 _id를 기준이 되는 key로 사용하고, direction은 -1로 설정하면 됩니다. 
    
  ```python
- data = db.users.find({}).sort({"_id": 1})
+ data = db.users.find({}).sort({"_id": -1})
  ```
- 하지만 TypeError가 발생하게 됩니다.
+ 
+ 하지만 TypeError가 발생하게 됩니다.  
+ 
  ```python
  TypeError: if no direction is specified, key_or_list must be an instance of lis
  ```
  <br>
- 이러한 오류가 발생하는 이유는, 
- 정렬 기능을 사용하는 경우 어떠한 기준을 먼저 적용할 것인지를 나타내야하는데  
- 딕셔너리(dict)는 순서가 지정되지 않기 때문입니다.  
- 따라서 리스트(list)를 활용하여 문제를 해결했습니다.
+ 
+ 이러한 오류가 발생하는 이유는,   
+ 정렬 기능을 사용하는 경우 어떠한 기준을 먼저 적용할 것인지를 나타내야하는데    
+ 딕셔너리(dict)는 순서가 지정되지 않기 때문입니다.    
+ 따라서 리스트(list)를 활용하여 문제를 해결했습니다.  
+ 
  ```python
  data = db.users.find({}).sort([("_id",-1)])
  ```
@@ -105,11 +111,13 @@ tags: python
 
  ```MongoDB```는 BSON(Biary JSON) 형식으로 데이터를 저장하지만, 데이터를 쿼리하는 경우 각 도큐먼트가 JSON형식으로 반환됩니다.  
  따라서 별도의 "변환"과정이 필요하지는 않습니다.  
- 하지만 _id의 경우 자동으로 JSON형태로 변환되지 않기 때문에 오류가 발생합니다.
- 또한 find를 통해 2개 이상의 도큐먼트를 불러오는 경우에는 Cursor가 반환되므로 오류가 발생합니다.  
+ 
+ 하지만 _id의 경우 자동으로 JSON형태로 변환되지 않기 때문에 오류가 발생합니다.  
+ 또한 find를 통해 2개 이상의 도큐먼트를 불러오는 경우에는 Cursor가 반환되므로 오류가 발생합니다.    
  <br>
 
  1. _id 문제 
+ 
 ```python
 TypeError: Object of type ObjectId is not JSON serializable
 ```
@@ -120,6 +128,7 @@ TypeError: Object of type ObjectId is not JSON serializable
  하지만 이 방법은 _id도 같이 return을 해야하는 경우에는 사용할 수 없는 방법입니다. 
 <br>
  이를 해결하기 위해 for문을 활용하여 "_id"를 string 타입으로 변환해주었습니다.
+ 
  ```python
  data = db.users.find({})
  for doc in data:
@@ -128,7 +137,7 @@ TypeError: Object of type ObjectId is not JSON serializable
  <br>
 
  2. Cursor 문제   
- ```pymongo```는 도큐먼트를 쿼리하는 메서드로 find_one,과 find가 있습니다.  
+ ```pymongo``` 에는 도큐먼트를 쿼리하는 메서드로 find_one,과 find가 있습니다.  
  find_one은 1개의 도큐먼트만 쿼리하는 메서드입니다.  
  페이지 기능을 구현하려면 여러 개의 도큐먼트를 쿼리해야하므로 find메서드를 사용해야합니다.  
  find메서드를 통해 쿼리한 도큐먼트를 바로 return하는 경우 Cursor자료형이므로 다음과 같은 에러가 발생합니다.  
@@ -137,13 +146,17 @@ TypeError: Object of type ObjectId is not JSON serializable
 TypeError: Object of type Cursor is not JSON serializable
 ```
  Cursor to JSON으로 서치한 결과,  
- bson모듈의 json_util이라는 tool을 import하고, dumps 함수를 찾았습니다.
+ bson모듈의 json_util이라는 tool의 dumps 함수를 찾았습니다.
+ 
  ```python
  from bson.json_util import dumps
  data = db.users.find({})
  return dumps(data)
  ```
+ 
  ```postman```을 활용하여 ```GET```을 해보았으나 만족스럽지 않았습니다.
+ <br>
+ 
  ![image](result.png)
 
  따라서 for문을 활용하여 각 도큐먼트를 리스트에 append하는 방식을 택하였습니다.
@@ -214,7 +227,7 @@ except IndexError:
    ```python
    from bson.objectid import ObjectId
    try:
-       data = db.users.find({"_id":{$gt:ObjectId(last_document_id)}}).sort([("_id",-1)]).limit(10)
+       data = db.users.find({"_id":{$lt:ObjectId(last_document_id)}}).sort([("_id",-1)]).limit(10)
        # 1번, 4번 오류 디버그
        documents = []
        for doc in data:
