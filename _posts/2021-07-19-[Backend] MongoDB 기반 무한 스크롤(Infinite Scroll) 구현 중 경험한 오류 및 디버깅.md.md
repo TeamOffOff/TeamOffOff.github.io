@@ -8,7 +8,7 @@ tags: python
 ---
  <br>
 
- ## STEP1 페이지 구현 기법 선택  
+## STEP1 페이지 구현 기법 선택  
 
  표시할 콘텐츠가 많은 경우, 데이터 로드를 위한 UX 패턴을 고민해보아야 합니다.  
  고려할 수 있는 디자인 패턴에는,  
@@ -28,7 +28,7 @@ tags: python
 -  하이브리드는 '더보기'버튼을 구현함으로써 페이징과 무한 스크롤을 혼합한 형태라고 볼 수 있습니다.  
 -  사용자가 하단에 도달하면 더보기 버튼을 보여주고, 사용자가 이를 클릭하는 경우에만 페이지가 새로 고침 됩니다.  
 
- ### 무한 스크롤 선택 이유  
+### 무한 스크롤 선택 이유  
  
  커뮤니티 모바일 애플리케이션의 경우 무한 스크롤 방식이 주로 사용됩니다.  
  1. 커뮤니티 서비스는 사용자가 오래 머물 수 있도록 해야하며, 
@@ -38,7 +38,7 @@ tags: python
  <br>
  <br>
 
- ## STEP2 무한 스크롤 구현  
+## STEP2 무한 스크롤 구현  
  
  무한 스크롤을 구현하기 위해서는,
 
@@ -71,13 +71,13 @@ tags: python
 <br>
 <br>
 
- ## STEP3 오류 및 디버깅  
+## STEP3 오류 및 디버깅  
  
   _주의 : python 코드에서 함수선언부분은 생략되어있습니다._  
   
 <br>
 
- ### 1 document sorting 시 dictionary 사용하는 경우 TypeError가 발생합니다.  
+### 1 document sorting 시 dictionary 사용하는 경우 TypeError가 발생합니다.  
  
  <br> 
  도큐먼트를 쿼리할 때 정렬기능(sort)을 사용할 수 있습니다.  
@@ -111,7 +111,7 @@ tags: python
  <br>
  <br>
 
- ### 2 find 결과를 그대로 return 하는 경우 TypeError가 발생합니다.  
+### 2 find 결과를 그대로 return 하는 경우 TypeError가 발생합니다.  
  
 <br>
 
@@ -179,7 +179,7 @@ TypeError: Object of type Cursor is not JSON serializable
  <br>
  <br>
 
- ### 3 더 이상 불러올 도큐먼트가 없는 경우 IndexError가 발생합니다.  
+### 3 더 이상 불러올 도큐먼트가 없는 경우 IndexError가 발생합니다.  
  
  <br>
 
@@ -212,7 +212,7 @@ except IndexError:
 ```
 <br>
 
- ### 4 string type의 _id는 query criteria로 사용할 수 없습니다.  
+### 4 string type의 _id는 query criteria로 사용할 수 없습니다.  
  
  <br>
 
