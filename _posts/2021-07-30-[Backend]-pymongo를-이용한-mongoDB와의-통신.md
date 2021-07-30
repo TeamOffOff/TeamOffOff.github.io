@@ -1,4 +1,3 @@
-```
 ---
 layout: post
 title: "[Backend] Pymongo를 이용한 mongoDB와의 통신"
@@ -7,7 +6,6 @@ date: 2021-07-30
 background: ''
 tags: python
 ---
-```
 
 <br>
 
