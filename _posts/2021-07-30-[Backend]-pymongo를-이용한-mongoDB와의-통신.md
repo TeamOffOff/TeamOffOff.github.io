@@ -1,4 +1,3 @@
-```
 ---
 layout: post
 title: "[Backend] Pymongo를 이용한 mongoDB와의 통신"
@@ -7,7 +6,6 @@ date: 2021-07-30
 background: ''
 tags: python
 ---
-```
 
 <br>
 
@@ -241,7 +239,5 @@ collection.find_one({"_id": ObjectId("6103bf33785e866dc3e5f530")})
 
 
 
-```
 > 참고: https://coding-start.tistory.com/273
-```
 
