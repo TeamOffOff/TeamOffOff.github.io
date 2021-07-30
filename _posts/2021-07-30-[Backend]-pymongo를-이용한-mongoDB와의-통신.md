@@ -239,7 +239,5 @@ collection.find_one({"_id": ObjectId("6103bf33785e866dc3e5f530")})
 
 
 
-```
 > 참고: https://coding-start.tistory.com/273
-```
 
