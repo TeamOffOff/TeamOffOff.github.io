@@ -25,10 +25,8 @@ val textView = findViewById<TextView>(R.id.tv_id)
 
 `viewBinding`은 뷰의 컴포넌트를 객체화시키지 않고 바로 사용할 수 있어 불필요한 코드 작업을 줄입니다. 
 - `findViewById()`와의 비교
-  1. Null Safety 보장
-  binding class에서 이미 뷰의 직접 참조를 가지므로 존재하지 않는 id를 사용할 일이 없어 Null Pointer Exception 발생 위험이 줄어듭니다.
-  2. Type Safety 보장
-  binding class에 있는 필드의 타입이 뷰와 일치하므로 Class Cast Exception의 발생 위험이 줄어듭니다.
+  1. Null Safety 보장 : binding class에서 이미 뷰의 직접 참조를 가지므로 존재하지 않는 id를 사용할 일이 없어 Null Pointer Exception 발생 위험이 줄어듭니다.
+  2. Type Safety 보장 : binding class에 있는 필드의 타입이 뷰와 일치하므로 Class Cast Exception의 발생 위험이 줄어듭니다.
   
 # View Binding 사용 방법
 
