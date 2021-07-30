@@ -1,15 +1,15 @@
 ```
 ---
-
 layout: post
-title: "[Backend] pymongo를 이용한 monogDB와의 통신"
+title: "[Backend] Pymongo를 이용한 mongoDB와의 통신"
 author: "김유민"
 date: 2021-07-30
 background: ''
 tags: python
 ---
-<br>
 ```
+
+<br>
 
 ## mongoDB란?
 
