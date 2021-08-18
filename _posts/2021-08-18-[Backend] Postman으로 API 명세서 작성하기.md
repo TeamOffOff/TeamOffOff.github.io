@@ -43,8 +43,6 @@ API 명세서를 작성하는 방식은 크게 다음과 같이 구분할 수 �
 
 
 <br>
-<br>
-<br>
 
 ### 2. ```global 변수``` 설정
 
@@ -55,16 +53,12 @@ API 명세서를 작성하는 방식은 크게 다음과 같이 구분할 수 �
 <img width="1728" alt="global 변수 설정 및 사용" src="https://user-images.githubusercontent.com/84752537/129886532-3525253d-c621-441d-8649-dbd6b946e3ff.png">
 
 <br> 
-<br> 
-<br> 
 
 ### 3. response 저장
 - response(요청 결과)를 예시로 저장할 수 있습니다.
 
 <img width="512" alt="response 저장" src="https://user-images.githubusercontent.com/84752537/129887724-a17bf1a0-656d-4f41-b9ab-4a5277b19bc9.png">
 
-<br>
-<br>
 <br>
 
 ### 4. 컬랙션 publish 
@@ -79,23 +73,17 @@ API 명세서를 작성하는 방식은 크게 다음과 같이 구분할 수 �
 <img width="1746" alt="document 생성 시작" src="https://user-images.githubusercontent.com/84752537/129888071-a437a248-6cfd-4c66-a7ca-b3115c968107.png">
 
 <br>
-<br>
-<br>
 
 #### 2) 컬렉션 선택
 <br>
 <img width="1463" alt="document 생성" src="https://user-images.githubusercontent.com/84752537/129888129-96e60585-4373-4a76-94d6-826fc9d86c8f.png">
 
 <br>
-<br>
-<br>
 
 #### 3) 도큐먼트 상세보기
 <br>
 <img width="518" alt="도큐먼트 상세보기" src="https://user-images.githubusercontent.com/84752537/129888213-303333c6-12b5-4e8b-9a19-d96864c0b762.png">
 
-<br>
-<br>
 <br>
 
 #### 4) publish 클릭
@@ -104,8 +92,6 @@ API 명세서를 작성하는 방식은 크게 다음과 같이 구분할 수 �
 <img width="1735" alt="publish 클릭" src="https://user-images.githubusercontent.com/84752537/129888262-540e893e-74f5-4d1d-806b-8c226b1d4616.png">
 <img width="622" alt="api 명세 publish" src="https://user-images.githubusercontent.com/84752537/129888356-68c91d8f-8aaa-480e-a746-8377a311a5d6.png">
 
-<br>
-<br>
 <br>
 
 #### 5) url 확인
